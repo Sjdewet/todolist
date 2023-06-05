@@ -1,4 +1,3 @@
-
 let list = [
     {
         id: 1,
@@ -38,28 +37,26 @@ let list = [
     },
     {
           id: 7,
-        name: 'come home and sleep',
+        name: 'come home and die in my sleep',
         createdDate: '2 June 2023',
         completed:''
     },
 ]
-console.log(list);
-
 
 document.querySelector('#add').onclick = function(){
-    if(document.querySelector('#input').value.length == 0)
+    if(document.querySelector('#input').value.length < 4)
     {
         alert("Must be 4 letters or more")
     }
     else{
         document.querySelector('#tasks').innerHTML += `
             <div class="task">
-            <span id="sort-btn"></span>
+            <input type="checkbox" id="checkbox">
                 <span id="taskname">
                     ${document.querySelector('#input').value}
                 </span>
                 <button class="delete">
-                    <i class="far fa-trash-alt">Delete</i>
+                    <i>X</i>
                 </button>
             </div>
         `;
